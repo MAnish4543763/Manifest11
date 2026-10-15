@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b10" />
+  <meta name="description" content="Manifest Esports — tournaments, teams, registrations and competitive gaming." />
+  <title>Manifest Esports | Compete with intent</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" data-view="home" aria-label="Manifest Esports home">
+      <span class="brand-mark">M<span>✦</span></span><span class="brand-copy"><strong>MANIFEST</strong><small>ESPORTS</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <button class="nav-link active" data-view="home">Discover</button>
+      <button class="nav-link" data-view="tournaments">Tournaments</button>
+      <button class="nav-link" data-view="leaderboard">Leaderboard</button>
+    </nav>
+    <div class="top-actions">
+      <button class="btn btn-quiet" id="admin-open"><span class="icon">▣</span> Admin</button>
+      <button class="btn btn-primary" id="hero-register-nav">Find a tournament <span>↗</span></button>
+      <button class="mobile-menu" id="mobile-menu" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home-view" class="view active">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> THE NEXT MATCH STARTS HERE</div>
+          <h1>MAKE YOUR<br/><span>MARK.</span></h1>
+          <p class="hero-lede">Your game. Your squad. Your moment. Join the arena where rising teams turn potential into legacy.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary btn-large" id="explore-btn">Explore tournaments <span>↗</span></button>
+            <button class="btn btn-outline btn-large" id="how-btn">How it works <span>↓</span></button>
+          </div>
+          <div class="hero-proof">
+            <div class="avatar-stack"><span>R</span><span>K</span><span>A</span><span>+</span></div>
+            <div><strong id="hero-player-count">Players are gearing up</strong><small>Find your next competitive run</small></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Abstract esports arena artwork">
+          <div class="art-grid"></div><div class="art-ring ring-a"></div><div class="art-ring ring-b"></div>
+          <div class="art-slash"></div><div class="art-emblem">M</div>
+          <div class="art-label"><span>MANIFEST / 001</span><strong>PLAY<br/>WITHOUT<br/>LIMITS.</strong></div>
+          <div class="art-chip"><span class="live-dot"></span> OPEN QUALIFIERS</div>
+        </div>
+        <div class="hero-bottom-line"><span>COMPETE WITH INTENT</span><span>EST. FOR THE NEXT GENERATION</span><span>SCROLL TO EXPLORE ↓</span></div>
+      </section>
+
+      <section class="stats-strip shell">
+        <div><span class="stat-value" id="stat-tournaments">03</span><span class="stat-label">LIVE & UPCOMING</span></div>
+        <div><span class="stat-value" id="stat-players">128+</span><span class="stat-label">PLAYERS IN THE ARENA</span></div>
+        <div><span class="stat-value">ONE</span><span class="stat-label">GOAL: YOUR NEXT WIN</span></div>
+        <div class="stats-note">Built for the<br/><strong>competitive spirit.</strong></div>
+      </section>
+
+      <section class="section shell" id="featured-section">
+        <div class="section-head">
+          <div><div class="eyebrow">PICK YOUR BATTLE</div><h2>Featured <span>tournaments.</span></h2></div>
+          <button class="text-link" data-view="tournaments">View all tournaments <span>↗</span></button>
+        </div>
+        <div id="featured-grid" class="tournament-grid"></div>
+      </section>
+
+      <section class="how-section">
+        <div class="shell how-layout">
+          <div><div class="eyebrow">YOUR RUN STARTS NOW</div><h2>Three steps.<br/><span>One big moment.</span></h2><p class="muted">No complicated process. Just bring your squad and be ready to compete.</p></div>
+          <div class="steps">
+            <article class="step"><span class="step-num">01</span><div><h3>Find your game</h3><p>Choose an open tournament that matches your title, squad and competitive level.</p></div><span class="step-icon">⌕</span></article>
+            <article class="step"><span class="step-num">02</span><div><h3>Register your squad</h3><p>Send your team details and captain contact. Keep an eye out for updates.</p></div><span class="step-icon">＋</span></article>
+            <article class="step"><span class="step-num">03</span><div><h3>Enter the arena</h3><p>Check the schedule, show up on time and play for the win.</p></div><span class="step-icon">↗</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell community-banner">
+        <div><div class="eyebrow">YOUR TEAM. YOUR STORY.</div><h2>Ready to leave<br/><span>a legacy?</span></h2></div>
+        <button class="btn btn-primary btn-large" id="community-cta">Browse open events <span>↗</span></button>
+        <div class="banner-watermark">M</div>
+      </section>
+    </section>
+
+    <section id="tournaments-view" class="view shell inner-page">
+      <div class="page-title-row"><div><div class="eyebrow">CHOOSE YOUR NEXT CHALLENGE</div><h1>All <span>tournaments.</span></h1><p class="muted">Find an event, bring your squad, make your mark.</p></div><div class="event-count"><strong id="all-event-count">0</strong><span>EVENTS</span></div></div>
+      <div class="filter-row"><div class="search-box"><span>⌕</span><input id="tournament-search" type="search" placeholder="Search tournaments or games..." /></div><select id="game-filter"><option value="all">All games</option></select><select id="status-filter"><option value="all">All statuses</option><option value="Open">Open</option><option value="Coming Soon">Coming Soon</option><option value="Closed">Closed</option></select></div>
+      <div id="all-tournaments-grid" class="tournament-grid"></div>
+      <section class="section live-public-section"><div class="section-head"><div><div class="eyebrow">LIVE EVENT CENTER</div><h2>Event <span>standings.</span></h2><p class="muted">Published points and qualification status for approved teams.</p></div></div><div id="public-live-standings" class="table-wrap"></div></section>
+    </section>
+
+    <section id="leaderboard-view" class="view shell inner-page">
+      <div class="eyebrow">THE ONES TO WATCH</div><h1>Leaderboard<span>.</span></h1><p class="muted">A demo leaderboard for the Manifest community.</p>
+      <div class="table-wrap"><table><thead><tr><th>RANK</th><th>TEAM</th><th>GAME</th><th>WINS</th><th>POINTS</th></tr></thead><tbody id="leaderboard-body"></tbody></table></div>
+      <p class="tiny-note">Community leaderboard demo. Tournament standings are calculated separately for each event and game scoring profile.</p>
+    </section>
+
+    <section id="register-view" class="view shell inner-page narrow-page">
+      <button class="back-link" data-view="tournaments">← Back to tournaments</button>
+      <div class="eyebrow">CLAIM YOUR SPOT</div><h1>Squad <span>registration.</span></h1><p class="muted">Submit your team details for the selected event. The organizer can review your request in the admin dashboard.</p>
+      <form id="registration-form" class="panel form-panel">
+        <div class="form-top"><div><span class="field-label">SELECTED EVENT</span><h3 id="selected-event-title">Tournament</h3></div><span id="selected-event-fee" class="fee-tag">FREE</span></div>
+        <input type="hidden" id="registration-tournament-id" />
+        <div class="form-grid">
+          <label>Team name<input name="teamName" required maxlength="50" placeholder="e.g. Night Raiders" /></label>
+          <label>Game ID / Team tag<input name="teamTag" maxlength="40" placeholder="Your in-game team ID" /></label>
+          <label>Captain full name<input name="captainName" required maxlength="70" placeholder="Team captain" /></label>
+          <label>Contact email<input name="email" type="email" required placeholder="captain@example.com" /></label>
+          <label>Discord username<input name="discord" maxlength="50" placeholder="name or name#0000" /></label>
+          <label>Team size<select name="teamSize" required><option value="1">Solo</option><option value="2">Duo</option><option value="4" selected>Squad (4)</option><option value="5">Team (5)</option></select></label>
+        </div>
+        <label>Roster / player names<textarea name="roster" rows="3" placeholder="List your players (optional)"></textarea></label>
+        <section class="payment-panel" id="payment-panel">
+          <div class="eyebrow">ENTRY PAYMENT</div><h3>Pay your tournament fee</h3>
+          <p class="muted small">Amount is based on the selected tournament. Scan this QR with your UPI app, or tap Pay with UPI on your phone.</p>
+          <div class="payment-layout"><a id="upi-qr-link" class="qr-frame" href="#" aria-label="Open UPI payment app"><img src="upi-qr.png" alt="Manifest Esports UPI payment QR code" id="upi-qr-image" /></a><div class="payment-details"><span class="field-label">AMOUNT TO PAY</span><strong id="payment-amount">₹0</strong><a class="btn btn-primary" id="pay-upi-button" href="#">Pay with UPI ↗</a><p class="tiny-note">On desktop, scan the QR using your phone camera or UPI app. On mobile, use Pay with UPI.</p></div></div>
+          <div class="form-grid payment-inputs"><label>UPI transaction ID / UTR<input name="transactionId" maxlength="80" placeholder="Enter UTR after payment (demo/manual mode)" /></label><label>Payment screenshot<input name="paymentScreenshot" type="file" accept="image/*" /></label></div>
+          <p class="tiny-note">Keep your payment receipt. A screenshot is only a claim; the admin must verify it against the actual UPI/bank statement.</p>
+        </section>
+        <label class="check-label"><input type="checkbox" required /> I confirm the details are correct and agree to follow the tournament rules.</label>
+        <div class="form-actions"><button class="btn btn-primary btn-large" type="submit">Submit registration <span>↗</span></button><span class="muted small">Demo mode stores records in this browser. Enable the secure provider backend for verified payments.</span></div>
+      </form>
+      <div id="registration-success" class="success-panel hidden"><span class="success-check">✓</span><h3>Registration submitted.</h3><p id="success-copy">Your request has been saved in this browser.</p><button class="btn btn-outline" data-view="tournaments">Browse more tournaments</button></div>
+    </section>
+
+    <section id="admin-view" class="view shell admin-shell">
+      <div id="admin-login-panel" class="login-wrap">
+        <div class="login-art"><div class="brand-mark large">M<span>✦</span></div><div class="eyebrow">MANIFEST ESPORTS / CONTROL ROOM</div><h2>Run the arena.</h2><p>Manage events, review registrations and keep the competition moving.</p><div class="login-lines"><span>EVENT OPERATIONS</span><span>TEAM MANAGEMENT</span><span>RESULTS & REPORTS</span></div></div>
+        <form id="admin-login-form" class="panel login-panel"><div class="eyebrow">AUTHORIZED ACCESS</div><h2>Admin <span>sign in.</span></h2><p class="muted">Demo access only. Production needs server-side accounts and moderator roles.</p><label>Username<input name="username" required autocomplete="username" value="admin" /></label><label>Password<input name="password" type="password" required autocomplete="current-password" placeholder="Enter demo password" /></label><p class="login-hint">Demo password: <strong>manifest123</strong></p><button class="btn btn-primary btn-large full-width" type="submit">Open dashboard <span>↗</span></button><button type="button" class="text-link centered" data-view="home">← Return to public site</button><p id="login-error" class="error-text hidden">Incorrect username or password.</p></form>
+      </div>
+      <div id="admin-dashboard" class="hidden">
+        <div class="admin-heading"><div><div class="eyebrow">MANIFEST / CONTROL ROOM</div><h1>Operations <span>dashboard.</span></h1><p class="muted">Manage tournaments, multi-game scoring, group allocation, qualification and wildcard requests. Demo changes stay in this browser.</p></div><button class="btn btn-outline" id="admin-logout">Sign out ↗</button></div>
+        <div class="admin-tabs"><button class="admin-tab active" data-admin-tab="overview">Overview</button><button class="admin-tab" data-admin-tab="events">Tournaments</button><button class="admin-tab" data-admin-tab="registrations">Registrations <span id="pending-pill">0</span></button><button class="admin-tab" data-admin-tab="operations">Live ops</button><button class="admin-tab" data-admin-tab="settings">Settings & data</button></div>
+        <div id="admin-overview" class="admin-panel-content">
+          <div class="metric-grid"><div class="metric-card"><span>TOTAL EVENTS</span><strong id="metric-events">0</strong><small>In your event library</small></div><div class="metric-card"><span>REGISTRATIONS</span><strong id="metric-registrations">0</strong><small>All teams submitted</small></div><div class="metric-card"><span>AWAITING REVIEW</span><strong id="metric-pending">0</strong><small>Need your attention</small></div><div class="metric-card"><span>APPROVED TEAMS</span><strong id="metric-approved">0</strong><small>Ready to compete</small></div></div>
+          <div class="admin-content-grid"><div class="panel"><div class="panel-heading"><div><h3>Recent registrations</h3><p class="muted small">Latest team submissions</p></div><button class="text-link" data-admin-tab="registrations">View all ↗</button></div><div id="recent-registrations" class="recent-list"></div></div><div class="panel"><div class="panel-heading"><div><h3>Quick actions</h3><p class="muted small">Keep your events moving</p></div></div><button class="quick-action" data-admin-tab="events"><span class="quick-icon">＋</span><span><strong>Create tournament</strong><small>Add an event to the public website</small></span><b>↗</b></button><button class="quick-action" data-admin-tab="registrations"><span class="quick-icon">✓</span><span><strong>Review teams</strong><small>Approve or reject team requests</small></span><b>↗</b></button><button class="quick-action" data-admin-tab="settings"><span class="quick-icon">⇩</span><span><strong>Export data</strong><small>Download a local JSON backup</small></span><b>↗</b></button></div></div>
+        </div>
+        <div id="admin-events" class="admin-panel-content hidden">
+          <div class="panel"><div class="panel-heading"><div><h3>Tournament manager</h3><p class="muted small">Create, edit status or remove demo events.</p></div><button class="btn btn-primary" id="new-event-btn">＋ New tournament</button></div>
+            <form id="event-form" class="event-form hidden"><input type="hidden" name="id"/><div class="form-grid"><label>Tournament name<input name="name" required maxlength="70" placeholder="e.g. Manifest Open #1"/></label><label>Game title<input name="game" required placeholder="BGMI, Valorant, Free Fire..."/></label><label>Entry fee (₹)<input name="fee" type="number" min="0" required value="0"/></label><label>Prize pool (₹)<input name="prize" type="number" min="0" required value="0"/></label><label>Start date<input name="date" type="date" required/></label><label>Team format<select name="format"><option>Squad (4)</option><option>Duo (2)</option><option>Solo</option><option>Team (5)</option></select></label><label>Tournament structure<select name="structure"><option value="groups">Groups → qualifiers → finals</option><option value="bracket">Knockout bracket</option><option value="both">Groups + knockout bracket</option></select></label><label>Scoring profile<select name="scoringProfile"><option value="placement-kills">Placement + kills + bonus</option><option value="wins-only">Wins / match points</option><option value="admin-defined">Admin-defined points</option></select></label><label>Slots<input name="slots" type="number" min="1" required value="25"/></label><label>Status<select name="status"><option>Open</option><option>Live</option><option>Coming Soon</option><option>Closed</option></select></label></div><label>Short description<textarea name="description" rows="2" placeholder="What should players know?"></textarea></label><div class="form-actions"><button class="btn btn-primary" type="submit">Save tournament</button><button class="btn btn-outline" type="button" id="cancel-event">Cancel</button></div></form>
+            <div id="admin-event-list" class="admin-event-list"></div>
+          </div>
+        </div>
+        <div id="admin-registrations" class="admin-panel-content hidden">
+          <div class="panel"><div class="panel-heading"><div><h3>Team registrations</h3><p class="muted small">Review submitted teams and update their status.</p></div><div class="search-box compact"><span>⌕</span><input id="admin-reg-search" placeholder="Search teams..." /></div></div><div class="filter-row admin-filter"><select id="admin-reg-status"><option value="all">All statuses</option><option>Pending</option><option>Approved</option><option>Rejected</option></select><select id="admin-reg-event"><option value="all">All tournaments</option></select></div><div class="csv-tools"><button class="btn btn-primary" id="export-csv-list">Export CSV statement</button><span class="tiny-note">Includes timestamp, captain name, team name, tournament, fee, transaction ID and review status.</span></div><div id="admin-registration-list" class="registration-list"></div></div>
+        </div>
+        <div id="admin-operations" class="admin-panel-content hidden">
+          <div class="panel"><div class="panel-heading"><div><h3>Live tournament operations</h3><p class="muted small">Allocate approved teams, enter results, qualify teams and accept wildcard entries.</p></div></div>
+            <label>Tournament<select id="ops-tournament"></select></label>
+            <div class="ops-rule-grid"><label>Number of groups<input id="ops-group-count" type="number" min="1" max="32" value="4"></label><label>Qualify per group<input id="ops-qualify-count" type="number" min="1" max="100" value="2"></label><label>Wildcard fee (₹)<input id="ops-wildcard-fee" type="number" min="0" value="100"></label><label>Wildcard deadline<input id="ops-wildcard-deadline" type="date"></label></div>
+            <div class="form-actions"><button class="btn btn-primary" id="allocate-groups">Auto-allocate approved teams</button><button class="btn btn-outline" id="run-qualification">Calculate qualification</button><button class="btn btn-outline" id="export-ops-csv">Export standings CSV</button></div>
+            <div id="ops-notice" class="notice-box"><strong>Operations guide</strong><p>Approve teams in Registrations first. Group allocation and qualification are based on the registrations and scores saved in this browser.</p></div>
+            <h3 class="ops-heading">Enter match result / points</h3><form id="result-form" class="form-grid"><label>Team<select name="registrationId" id="result-team" required></select></label><label>Match / round<input name="matchName" required placeholder="Group A · Match 1"></label><label>Placement points<input name="placement" type="number" min="0" value="0" required></label><label>Kills / eliminations<input name="kills" type="number" min="0" value="0" required></label><label>Bonus points<input name="bonus" type="number" min="0" value="0" required></label><div class="form-actions"><button class="btn btn-primary" type="submit">Save result</button></div></form>
+            <h3 class="ops-heading">Wildcard mid-tournament entry</h3><p class="muted small">Set the tournament status to Live first. Wildcard teams enter the active event and are assigned to the least-populated group when groups have already been allocated.</p><form id="wildcard-form" class="form-grid"><label>Team name<input name="teamName" required maxlength="50"></label><label>Captain name<input name="captainName" required maxlength="70"></label><label>Contact email<input name="email" type="email" required></label><div class="wildcard-payment-note notice-box"><strong>Automatic wildcard approval</strong><p>In production, a wildcard becomes eligible only after the payment provider verifies the exact amount and sends a valid server webhook. Never approve a team from a screenshot or a typed UTR alone.</p></div><label>Transaction ID / UTR<input name="transactionId" maxlength="80" placeholder="Optional in demo; provider supplies payment ID in production"></label><div class="form-actions"><button class="btn btn-primary" type="submit">Create wildcard request</button></div></form>
+            <h3 class="ops-heading">Live points table</h3><div id="ops-standings" class="table-wrap"></div><h3 class="ops-heading">Group allocation & qualification</h3><div id="ops-groups"></div>
+          </div>
+        </div>
+        <div id="admin-settings" class="admin-panel-content hidden">
+          <div class="admin-content-grid"><div class="panel"><h3>Brand settings</h3><p class="muted small">Customize the public site heading and contact details.</p><form id="settings-form"><label>Organization name<input name="brand" value="Manifest Esports" required/></label><label>Contact email<input name="email" type="email" value="hello@manifestesports.example"/></label><label>Community / Discord link<input name="discord" type="url" placeholder="https://discord.gg/your-server"/></label><button class="btn btn-primary" type="submit">Save settings</button></form></div><div class="panel"><h3>Local data tools</h3><p class="muted small">Export or restore this browser's demo data.</p><button class="btn btn-outline full-width" id="export-data">↓ Export JSON backup</button><button class="btn btn-primary full-width" id="export-csv">↓ Export transaction CSV</button><label class="upload-json">↑ Import JSON backup<input type="file" id="import-data" accept="application/json"/></label><button class="btn btn-danger full-width" id="reset-data">Reset demo data</button><p class="tiny-note">This site uses localStorage. Clearing browser data can erase records.</p></div></div>
+          <div class="notice-box"><strong>Production note</strong><p>This is a static GitHub Pages demo. Login is not secure authentication, data is not shared between devices, and registrations are stored only in the visitor's browser. Do not use it for real private data or payment verification until connected to a secure backend.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell"><a class="brand footer-brand" href="#" data-view="home"><span class="brand-mark">M<span>✦</span></span><span class="brand-copy"><strong>MANIFEST</strong><small>ESPORTS</small></span></a><span>BUILT FOR THE COMPETITIVE SPIRIT.</span><span>© <span id="year"></span> MANIFEST ESPORTS</span></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
