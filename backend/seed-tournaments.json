@@ -1,5 +1,0 @@
-[
-  {"id":"evt-001","name":"Manifest Open Series","game":"BGMI","fee":50,"wildcardFee":100,"slots":25,"status":"Open","structure":"groups","groupCount":4,"qualifyPerGroup":2,"wildcardDeadline":null},
-  {"id":"evt-002","name":"Nightfall Clash","game":"Valorant","fee":0,"wildcardFee":100,"slots":16,"status":"Open","structure":"bracket","groupCount":4,"qualifyPerGroup":2,"wildcardDeadline":null},
-  {"id":"evt-003","name":"Rising Legends Cup","game":"Free Fire","fee":30,"wildcardFee":100,"slots":48,"status":"Coming Soon","structure":"both","groupCount":4,"qualifyPerGroup":2,"wildcardDeadline":null}
-]
