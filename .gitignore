@@ -1,9 +1,0 @@
-# Secrets and local database files
-.env
-backend/.env
-backend/*.sqlite
-backend/*.sqlite-shm
-backend/*.sqlite-wal
-node_modules/
-backend/node_modules/
-.DS_Store
